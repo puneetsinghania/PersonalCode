@@ -2,8 +2,10 @@
 public class Merge2SortedArraysInSortedForm {
 
 	public static void main(String[] args) {
-		int[] a={9,11,17,18};
-		int[] b={2,10,12,15,17};
+		//int[] a={9,11,17,18};
+		//int[] b={2,10,12,15,17};
+		int[] a={ 5, 8, 9};
+		int[] b={4, 7, 8};
 		int[] c=new int[a.length+b.length];
 		
 		int i=0,j=0;
@@ -21,7 +23,6 @@ public class Merge2SortedArraysInSortedForm {
 					c[k]=b[j];
 					j++;
 				}
-				
 				
 			}
 			else if(i<a.length)
