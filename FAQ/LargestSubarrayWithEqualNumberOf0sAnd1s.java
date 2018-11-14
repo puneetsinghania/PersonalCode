@@ -23,7 +23,7 @@ public class LargestSubarrayWithEqualNumberOf0sAnd1s {
 				
 				if(count1==count0)
 				{
-					fcount++;
+					//fcount++;
 					int len=j-i+1;
 					if(len>maxlen)
 					{
