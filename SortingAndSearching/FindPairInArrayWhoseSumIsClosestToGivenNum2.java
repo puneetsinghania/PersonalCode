@@ -1,5 +1,7 @@
 package SortingAndSearching;
 
+import java.util.Arrays;
+
 public class FindPairInArrayWhoseSumIsClosestToGivenNum2 {
 
 	public static void main(String[] args) {
@@ -7,6 +9,7 @@ public class FindPairInArrayWhoseSumIsClosestToGivenNum2 {
         int given = 54;
         int minIndexI=0,minIndexJ=0;
         
+        Arrays.sort(ar);
         int mindiff=Integer.MAX_VALUE;
         int l=0;
         int r=ar.length-1;

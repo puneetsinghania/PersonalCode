@@ -6,7 +6,7 @@ public class MaximumDifferenceBetween2ElementsWhereLargerAppearsAfterSmaller {
 		int ar[] = {1, 2, 90, 10, 110};
 		int maxdiff=0;
 		
-		for(int i=0;i<ar.length;i++)
+		for(int i=0;i<ar.length-1;i++)
 		{
 			for(int j=i+1;j<ar.length;j++)
 			{
