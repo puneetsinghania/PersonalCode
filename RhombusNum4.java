@@ -2,7 +2,7 @@
 public class RhombusNum4 {
 
 	public static void main(String[] args) {
-		int len=7,sp=len-1,st=1,n=1;
+		int len=7,sp=len/2,st=1,n=1;
 		
 		for(int i=0;i<len;i++)
 		{
