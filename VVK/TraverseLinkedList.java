@@ -1,51 +1,60 @@
 package VVK;
 
-public class CreateCircularLinkedList {
+public class TraverseLinkedList {
 	
 	public static void main(String[] args) {
 		int totalNodes=5;
 		int nodeData=2;
 		
 		int i=1;
-		Node1 temp=new Node1(nodeData);
+		Node6 temp=new Node6(nodeData);
 		temp.data=nodeData;
 		temp.next=null;
-		Node1 cur=temp;
-		Node1 head=temp;
-		Node1 toPrint=head;
+		Node6 cur=temp;
+		Node6 head=temp;
+		Node6 toPrint=head;
 		
 		for(i=2;i<=totalNodes;i++)
 		{
 			nodeData=nodeData+1;
-			temp=new Node1(nodeData);
+			temp=new Node6(nodeData);
 			temp.data=nodeData;
 			temp.next=null;
 			cur.next=temp;
 			cur=cur.next;
 		}
 		
-		cur.next=head; //most important line -the only different line from normal linked list
-		
-		System.out.println("Head==>"+head.data);
-		System.out.println("cur.next==>"+cur.next.data);
-		
 		/*while(toPrint!=null)
 		{
 			System.out.print(toPrint.data +"->");
 			toPrint=toPrint.next;
-		}*/
+		}
+		*/
 		
+		traverse(head);
+		
+	}
+	
+	//Important method here
+	public static void traverse(Node6 head)
+	{
+		Node6 p=head;
+		while(p!=null)
+		{
+			System.out.print(p.data+" ");
+			p=p.next;
+		}
 	}
 	
 }
 
 
 
-class Node1
+class Node6
 {
 	int data;
-	Node1 next;
-	public Node1(int data)
+	Node6 next;
+	public Node6(int data)
 	{
 		this.data=data;
 		this.next=null;
