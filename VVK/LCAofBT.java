@@ -4,9 +4,6 @@ import java.util.Stack;
 
 public class LCAofBT {
 	
-	static Stack<Node28> s1=new Stack<>();
-	static Stack<Node28> s2=new Stack<>();
-	
 	public static void main(String[] args) {
 		
 		int totalNodes=21;
