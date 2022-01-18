@@ -16,7 +16,7 @@ public class IsHappyNumber {
 			}
 			num=sum;
 		}
-		if(num==1)
+		if(num==1 || num==7)
 			System.out.println("Happy number");
 		else
 			System.out.println("Not a Happy number");
