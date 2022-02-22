@@ -2,41 +2,45 @@
 public class RemoveMoreThan1SpaceBetweenWords {
 
 	public static void main(String[] args) {
-		String str="I  am  very   very   bad boy   ";
+		String str="  I  am  very   very   bad boy   ";
 		
 		char[] ar=str.toCharArray();
 		
 		String st="";
 		int space=0;
-		boolean wrong=false;
+		boolean wrong=true;
+		boolean start= false;
+
 		for(int i=0;i<ar.length;i++)
 		{
-			while(ar[i]!=' ')
+			if(ar[i]!=' ' && !start)
 			{
-				
-				st=st+ar[i];
-				i++;
-				space=0;
+				start=true;
 			}
-			int j=i;
-			wrong=false;
-			while(ar[j]==' ')
+			if(ar[i]!=' ' && start)
 			{
-				if(j!=ar.length-1)
-					j++;
-				else
+				st=st+ar[i];
+				space=0;
+				wrong=true;
+			}
+			if(ar[i]==' ' && start)
+			{
+				for(int j=i;j<ar.length;j++)
 				{
-					wrong=true;
-					break;
+					if(ar[j]!=' ')
+					{
+						wrong=false;
+						break;
+					}
 				}
 			}
-			space++;
-			if(space==1 && wrong==false)
+			if(ar[i]==' ' && space<1 && !wrong && start)
+			{
 				st=st+ar[i];
-			
+				space++;
+			}
+
 		}
 		System.out.print(st);
-		System.out.print(".");
-		
 	}
 }

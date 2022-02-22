@@ -19,7 +19,9 @@ public class MakingEveryFirstCharacterCapitalInSentence {
 				}
 				st=st+chArray[j];
 			}
-			st=st+" ";
+
+			if(i!=ar.length-1)
+				st=st+" ";
 			
 		}
 	

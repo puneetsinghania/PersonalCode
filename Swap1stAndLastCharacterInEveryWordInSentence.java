@@ -19,9 +19,10 @@ public class Swap1stAndLastCharacterInEveryWordInSentence {
 			{
 			st=st+chArray[j];
 			}
-		
-			st=st+" ";
+
+			if(i!=ar.length-1)
+				st=st+" ";
 		}
-		System.out.println(st);
+		System.out.print(st);
 	}
 }
