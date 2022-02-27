@@ -1,7 +1,7 @@
 package VVK;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 public class RemoveDuplicatesFromUnsortedLinkedList_A {
 	
@@ -49,7 +49,7 @@ public class RemoveDuplicatesFromUnsortedLinkedList_A {
 	//Important method here
 	public static Node22 removeDuplicatesFromUnsorted(Node22 head)
 	{
-		Map<Integer,Integer> map=new HashMap<>();
+		Set<Integer> set=new HashSet<>();
 		
 		Node22 cur=head;
 		Node22 prev=null;
@@ -58,9 +58,9 @@ public class RemoveDuplicatesFromUnsortedLinkedList_A {
 		while(cur!=null)
 		{
 			next=cur.next;
-			if(!map.containsKey(cur.data))
+			if(!set.contains(cur.data))
 			{
-				map.put(cur.data,1);
+				set.add(cur.data);
 				prev=cur;
 				cur=next;
 			}
