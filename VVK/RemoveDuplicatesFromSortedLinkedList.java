@@ -59,11 +59,6 @@ public class RemoveDuplicatesFromSortedLinkedList {
 			else if(cur.data==next.data)
 			{
 				next=next.next;
-				if(next==null)
-				{
-					cur.next=null;
-					break;
-				}
 				cur.next=next;
 			}
 			
