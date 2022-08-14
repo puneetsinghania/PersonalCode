@@ -8,7 +8,8 @@ public class Merge1ArrayOfSize_N_IntoAnotherArrayOfSize_MplusN {
 	     
 	     int i;
 	     int j=ar.length-1;
-	     
+
+		 //move valid elements to the end
 	     for(i=ar.length-1;i>=0;i--)
 	     {
 	    	 if(ar[i]!=-1)
@@ -18,13 +19,15 @@ public class Merge1ArrayOfSize_N_IntoAnotherArrayOfSize_MplusN {
 	    	 }
 	     }
 
+		 //display the elements just for testing
 	     for(int m=0;m<ar.length;m++)
 	     {
 	    	 System.out.print(ar[m]+" ");
 	     }
 	     
 	     System.out.println();
-	     
+
+		 //merge the elements into m+n array in a sorted manner by comparing
 	     int k=0;
 	     i=(ar.length-N.length)-1;
     	 j=0;
@@ -45,11 +48,12 @@ public class Merge1ArrayOfSize_N_IntoAnotherArrayOfSize_MplusN {
 	    		 k++;
 	    	 }
 	     }
+
+		 //display the final list of elements
 	     for(int l=0;l<ar.length;l++)
 	     {
 	    	 System.out.print(ar[l]+" ");
 	     }
-	     
-	     
+
 	}
 }
