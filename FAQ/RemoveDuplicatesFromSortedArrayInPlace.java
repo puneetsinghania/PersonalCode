@@ -17,6 +17,7 @@ public class RemoveDuplicatesFromSortedArrayInPlace {
 		}
 		ar[count]=ar[ar.length-1];
 		count++;
+
 		for(int j=0;j<count;j++)
 		{
 			System.out.print(ar[j]+" ");
